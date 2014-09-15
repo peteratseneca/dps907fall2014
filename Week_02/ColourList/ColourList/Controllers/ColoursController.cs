@@ -74,10 +74,7 @@ namespace ColourList.Controllers
                     // HTTP 201 with the new object in the entity body
                     // Notice how to create the URI for the Location header
 
-                    var uri = System.Web.VirtualPathUtility
-                        .AppendTrailingSlash(Request.RequestUri.ToString())
-                        + addedItem.Id.ToString();
-
+                    var uri = Url.Link("DefaultApi", new { id = addedItem.Id });
                     return Created<ColourBase>(uri, addedItem);
                 }
             }
