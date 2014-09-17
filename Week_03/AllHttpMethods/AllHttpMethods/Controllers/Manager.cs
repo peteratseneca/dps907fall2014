@@ -71,7 +71,7 @@ namespace AllHttpMethods.Controllers
         }
 
         // Edit object
-        public HumanBase EditHuman(HumanBase editedItem)
+        public HumanBase EditHuman(HumanEdit editedItem)
         {
             // Ensure that we can continue
             if (editedItem == null)

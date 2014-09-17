@@ -93,7 +93,7 @@ namespace AllHttpMethods.Controllers
         }
 
         // PUT: api/Humans/5
-        public IHttpActionResult Put(int id, [FromBody]HumanBase editedItem)
+        public IHttpActionResult Put(int id, [FromBody]HumanEdit editedItem)
         {
             // Ensure that an "editedItem" is in the entity body
             if (editedItem == null)
