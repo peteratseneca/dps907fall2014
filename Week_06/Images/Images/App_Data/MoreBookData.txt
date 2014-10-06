@@ -1,0 +1,8 @@
+
+More book data...
+
+{"Title":"Objective-C Phrasebook","Author":"Chisnall, David","ISBN13":"9780321743626","Pages":352,"Published":"2011-01-28T00:00:00","Format":"Paperback"}
+
+{"Title":"The Astronaut's Guide to Life on Earth","Author":"Hadfield, Chris","ISBN13":"9780316253017","Pages":304,"Published":"2013-10-29T00:00:00","Format":"Hardcover"}
+
+{"Title":"Falling Backwards","Author":"Arden, Jann","ISBN13":"9780307399847","Pages":288,"Published":"2011-11-01T00:00:00","Format":"Hardcover"}
