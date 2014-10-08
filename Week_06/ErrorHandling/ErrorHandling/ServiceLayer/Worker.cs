@@ -16,22 +16,9 @@ namespace ErrorHandling.ServiceLayer
 
         // Properties for each repository
 
-        private Template_repo _tmp;
         private LoggedException_repo _log;
 
         // Custom getters for each repository
-
-        public Template_repo Tmp
-        {
-            get
-            {
-                if (this._tmp == null)
-                {
-                    this._tmp = new Template_repo(_ds);
-                }
-                return this._tmp;
-            }
-        }
 
         public LoggedException_repo Exceptions
         {
@@ -44,6 +31,9 @@ namespace ErrorHandling.ServiceLayer
                 return _log;
             }
         }
+
+        // ############################################################
+        // Memory usage cleanup code
 
         protected virtual void Dispose(bool disposing)
         {

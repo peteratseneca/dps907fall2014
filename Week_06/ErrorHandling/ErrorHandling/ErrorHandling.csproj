@@ -164,12 +164,10 @@
     <Compile Include="Controllers\Links_vm.cs" />
     <Compile Include="Controllers\LoggedException_vm.cs" />
     <Compile Include="Controllers\RootController.cs" />
-    <Compile Include="Controllers\Template_vm.cs" />
     <Compile Include="Handlers\ExceptionHandler.cs" />
     <Compile Include="Handlers\HttpOptionsMethodHandler.cs" />
     <Compile Include="ServiceLayer\LoggedException_repo.cs" />
     <Compile Include="ServiceLayer\Repository.cs" />
-    <Compile Include="ServiceLayer\Template_repo.cs" />
     <Compile Include="ServiceLayer\Worker.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -32,12 +32,5 @@ namespace ErrorHandling.Models
         public string StackTrace { get; set; }
     }
 
-    // Template class, please delete it
-    public class Template
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
-
     // Add your design model classes here
 }
