@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+// more...
+using Newtonsoft.Json;
 
 namespace Images.Controllers
 {
@@ -32,6 +34,32 @@ namespace Images.Controllers
         /// Href - hypermedia reference
         /// </summary>
         public string Href { get; set; }
+
+        // New added properties...
+        
+        // The null value handling issue is controversial
+        // Attributes were used here to make the result look nicer (without null-valued properties)
+        // However, read these...
+        // StackOverflow - http://stackoverflow.com/questions/10150312/removing-null-properties-from-json-in-mvc-web-api-4-beta
+        // CodePlex - http://aspnetwebstack.codeplex.com/workitem/243
+
+        /// <summary>
+        /// ContentType - internet media type, for content negotiation
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string ContentType { get; set; }
+
+        /// <summary>
+        /// Method - HTTP method(s) which can be used
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string Method { get; set; }
+
+        /// <summary>
+        /// Title - human-readable title label
+        /// </summary>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public string Title { get; set; }
     }
 
     /// <summary>

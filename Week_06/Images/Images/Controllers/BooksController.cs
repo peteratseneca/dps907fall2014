@@ -70,13 +70,24 @@ namespace Images.Controllers
                 List<string> u = Request.RequestUri.Segments.ToList();
                 book.Links.Add(new Link() { Rel = "collection", Href = u[0] + u[1] + u[2] });
 
+                // ############################################################
+                // New on Wed Oct 8 2014...
+
+                // Add a link relation to indicate that an alternate representation is available
+                book.Links.Add(new Link() { Rel = "self", Href = self, ContentType = "image/*", Title = "Book cover photo" });
+
+                // Add a link relation to indicate a command that can be performed
+                book.Links.Add(new Link() { Rel = "edit", Href = self + "/setphoto", ContentType = "image/*", Method = "PUT" });
+
+                // ############################################################
+
                 // Add a link relation for 'self' in the item 
                 book.Item.Link = new Link() { Rel = "self", Href = self };
 
                 // Build a response object
                 var response = Request.CreateResponse(HttpStatusCode.OK, book);
 
-                // The repository method has returned a VehicleFull object 
+                // The repository method has returned a BookLinked object 
                 // We need to know if the request asked for an image to be returned.
                 // If so, we need to configure the Content-Type header BEFORE the object
                 // is passed on to the 'image' media formatter.
