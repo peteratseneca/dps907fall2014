@@ -1,5 +1,6 @@
 ### Week 9 code examples
 
-**SecurityBaseMicrosoft**
+**SecMS**
 
 VS2013 Update 3 - new project with 'individual user accounts'.  
+Bare-bones - does not include any extra functionality.  
