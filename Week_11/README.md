@@ -1,5 +1,10 @@
 ### Week 11 code examples
 
+**AssociationsWithSOAP**
+
+Adds SOAP XML web service to the code example from Week 8.  
+
+
 **AuthServerV2**
 
 Standalone Authorization Server (AS), and includes an identity server.  
